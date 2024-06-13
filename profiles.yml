@@ -1,8 +1,6 @@
 jaffle_shop:
-
-  target: dev
   outputs:
-    dev:
+    test:
+      threads: 1
       type: duckdb
-      path: 'jaffle_shop.duckdb'
-      threads: 24
+  target: test
