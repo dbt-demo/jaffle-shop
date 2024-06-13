@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: stg_payments
+    description: "This staging table contains raw payment data."
+    columns:
+      - name: payment_id
+        description: "The unique identifier for a payment."
+      - name: customer_id
+        description: "The unique identifier for the customer who made the payment."
+      - name: amount
+        description: "The amount of the payment."
+      - name: payment_date
+        description: "The date when the payment was made."
+
