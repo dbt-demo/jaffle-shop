@@ -3599,3 +3599,45 @@ select
 [0m16:49:12.755275 [debug] [MainThread]: Command `dbt compile` succeeded at 16:49:12.755213 after 0.64 seconds
 [0m16:49:12.755462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043ac7f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066362e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f39070>]}
 [0m16:49:12.755659 [debug] [MainThread]: Flushing usage events
+[0m13:27:07.175782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104891af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063ad070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10641fcd0>]}
+
+
+============================== 13:27:07.178558 | 5fa3f928-4c48-40ac-bd04-40439d88b200 ==============================
+[0m13:27:07.178558 [info ] [MainThread]: Running with dbt=1.7.5
+[0m13:27:07.178864 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/williamshi/agents-core/.environment/b58e1eb9-1519-4105-9a38-ab1622f7ddd8/666b55d3773e77b9a57271f4', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/williamshi/agents-core/.environment/b58e1eb9-1519-4105-9a38-ab1622f7ddd8/666b55d3773e77b9a57271f4/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile --models customers', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:27:07.429846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5fa3f928-4c48-40ac-bd04-40439d88b200', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063bbeb0>]}
+[0m13:27:07.498795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5fa3f928-4c48-40ac-bd04-40439d88b200', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063e7790>]}
+[0m13:27:07.499911 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m13:27:07.508035 [debug] [MainThread]: checksum: 9e195a7e2498115e3a0071333dd5a6b6a8f8586a16507edd6adb1ded89eccd5a, vars: {}, profile: , target: , version: 1.7.5
+[0m13:27:07.514249 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:27:07.514505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5fa3f928-4c48-40ac-bd04-40439d88b200', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106652be0>]}
+[0m13:27:08.182222 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two schema.yml entries for the same resource named customers. Resources and their associated columns may only be described a single time. To fix this, remove the resource entry for customers in one of these files:
+   - models/customers.yml
+  models/schema.yml
+[0m13:27:08.183438 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 1.0485493, "process_user_time": 1.894501, "process_kernel_time": 0.132476, "process_mem_max_rss": "129286144", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:27:08.183712 [debug] [MainThread]: Command `dbt compile` failed at 13:27:08.183649 after 1.05 seconds
+[0m13:27:08.183906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104891af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ee3910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ee3430>]}
+[0m13:27:08.184092 [debug] [MainThread]: Flushing usage events
+[0m13:27:11.254321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064b9af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107fe4760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108046760>]}
+
+
+============================== 13:27:11.256095 | 154742bb-00ae-44a9-86da-3a62ca938e95 ==============================
+[0m13:27:11.256095 [info ] [MainThread]: Running with dbt=1.7.5
+[0m13:27:11.256388 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/williamshi/agents-core/.environment/b58e1eb9-1519-4105-9a38-ab1622f7ddd8/666b55d3773e77b9a57271f4', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/williamshi/agents-core/.environment/b58e1eb9-1519-4105-9a38-ab1622f7ddd8/666b55d3773e77b9a57271f4/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt test --select customers', 'send_anonymous_usage_stats': 'True'}
+[0m13:27:11.412020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '154742bb-00ae-44a9-86da-3a62ca938e95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106cd9d30>]}
+[0m13:27:11.480398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '154742bb-00ae-44a9-86da-3a62ca938e95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081a6d30>]}
+[0m13:27:11.480795 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m13:27:11.487572 [debug] [MainThread]: checksum: 9e195a7e2498115e3a0071333dd5a6b6a8f8586a16507edd6adb1ded89eccd5a, vars: {}, profile: , target: , version: 1.7.5
+[0m13:27:11.493287 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m13:27:11.493527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '154742bb-00ae-44a9-86da-3a62ca938e95', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082a9670>]}
+[0m13:27:12.157587 [error] [MainThread]: Encountered an error:
+Compilation Error
+  dbt found two schema.yml entries for the same resource named customers. Resources and their associated columns may only be described a single time. To fix this, remove the resource entry for customers in one of these files:
+   - models/customers.yml
+  models/schema.yml
+[0m13:27:12.158399 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 0.9393574, "process_user_time": 1.88429, "process_kernel_time": 0.086394, "process_mem_max_rss": "128778240", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m13:27:12.158664 [debug] [MainThread]: Command `dbt test` failed at 13:27:12.158603 after 0.94 seconds
+[0m13:27:12.158848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064b9af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089376d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b0bdf0>]}
+[0m13:27:12.159035 [debug] [MainThread]: Flushing usage events
