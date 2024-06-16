@@ -9,13 +9,13 @@ select
 
 with child as (
     select customer_id as from_field
-    from "jaffle_shop"."main"."orders"
+    from "memory"."main"."orders"
     where customer_id is not null
 ),
 
 parent as (
     select customer_id as to_field
-    from "jaffle_shop"."main"."customers"
+    from "memory"."main"."customers"
 )
 
 select

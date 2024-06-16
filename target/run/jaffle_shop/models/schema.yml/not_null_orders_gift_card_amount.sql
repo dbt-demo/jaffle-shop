@@ -10,7 +10,7 @@ select
 
 
 select gift_card_amount
-from "jaffle_shop"."main"."orders"
+from "memory"."main"."orders"
 where gift_card_amount is null
 
 

@@ -10,7 +10,7 @@ select
 
 
 select coupon_amount
-from "jaffle_shop"."main"."orders"
+from "memory"."main"."orders"
 where coupon_amount is null
 
 
