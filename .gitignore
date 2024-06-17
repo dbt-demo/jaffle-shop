@@ -2,7 +2,7 @@
 /target/
 dbt_modules/
 logs/
-jaffleshop.duckdb
+jaffle_shop.duckdb
 # Ignore user-specific config
 profiles.yml
 
