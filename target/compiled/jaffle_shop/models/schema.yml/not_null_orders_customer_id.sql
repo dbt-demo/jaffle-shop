@@ -5,7 +5,7 @@
 
 
 select customer_id
-from "jaffle_shop"."main"."orders"
+from "memory"."main"."orders"
 where customer_id is null
 
 
