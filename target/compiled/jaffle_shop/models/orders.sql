@@ -2,13 +2,13 @@
 
 with orders as (
 
-    select * from "jaffle_shop"."main"."stg_orders"
+    select * from "memory"."main"."stg_orders"
 
 ),
 
 payments as (
 
-    select * from "jaffle_shop"."main"."stg_payments"
+    select * from "memory"."main"."stg_payments"
 
 ),
 
