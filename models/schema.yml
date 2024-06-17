@@ -27,7 +27,11 @@ models:
         description: Count of the number of orders a customer has placed
 
       - name: total_order_amount
-        description: Total value (CAD) of a customer's orders
+        description: Total value (AUD) of a customer's orders
+        description: Amount of the order (AUD) paid for by credit card
+        description: Amount of the order (AUD) paid for by coupon
+        description: Amount of the order (AUD) paid for by bank transfer
+        description: Amount of the order (AUD) paid for by gift card
 
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
@@ -58,10 +62,10 @@ models:
 
       - name: amount
       description: Total amount (CAD) of the order
-        tests:
-          - not_null
-
-      - name: credit_card_amount
+        description: Amount of the order (AUD) paid for by credit card
+        description: Amount of the order (AUD) paid for by coupon
+        description: Amount of the order (AUD) paid for by bank transfer
+        description: Amount of the order (AUD) paid for by gift card
         description: Amount of the order (CAD) paid for by credit card
         description: Amount of the order (CAD) paid for by coupon
         description: Amount of the order (CAD) paid for by bank transfer
