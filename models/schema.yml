@@ -62,7 +62,7 @@ models:
           - not_null
 
       - name: credit_card_amount
-        description: Amount of the order (AUD) paid for by credit card
+        description: Amount of the order (CAD) paid for by credit card
         tests:
           - not_null
 
