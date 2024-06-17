@@ -1,5 +1,5 @@
 with source as (
-    select * from "jaffle_shop"."main"."raw_orders"
+    select * from "memory"."main"."raw_orders"
 
 ),
 

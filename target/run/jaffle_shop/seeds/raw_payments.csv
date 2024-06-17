@@ -1,10 +1,12 @@
 
     
     
-    truncate table "jaffle_shop"."main"."raw_payments";
+    
+    create table "memory"."main"."raw_payments" ("id" integer,"order_id" integer,"payment_method" text,"amount" integer)
+  ;
     -- dbt seed --
     
-          COPY "jaffle_shop"."main"."raw_payments" FROM '/Users/williamshi/learning/jaffle_shop_duckdb/seeds/raw_payments.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+          COPY "memory"."main"."raw_payments" FROM '/app/.environment/2a59d976-2f5c-41a1-a92a-250824e326e6/667073052eab3738479d07d0/seeds/raw_payments.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
         
 
 ;

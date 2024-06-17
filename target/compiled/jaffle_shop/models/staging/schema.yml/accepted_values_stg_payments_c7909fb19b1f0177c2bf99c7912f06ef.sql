@@ -8,7 +8,7 @@ with all_values as (
         payment_method as value_field,
         count(*) as n_records
 
-    from "jaffle_shop"."main"."stg_payments"
+    from "memory"."main"."stg_payments"
     group by payment_method
 
 )

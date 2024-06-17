@@ -10,7 +10,7 @@ select
 
 
 select order_id
-from "jaffle_shop"."main"."orders"
+from "memory"."main"."orders"
 where order_id is null
 
 
