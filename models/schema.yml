@@ -10,7 +10,10 @@ models:
         tests:
           - unique
           - not_null
-
+      - name: email
+        description: The email address of the customer
+        tests:
+          - not_null
       - name: first_name
         description: Customer's first name. PII.
 
