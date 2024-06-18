@@ -1,0 +1,17 @@
+models:
+  - name: orders
+    description: Orders data with payment details and metrics.
+    columns:
+      - name: order_id
+        description: The unique identifier for each order.
+      - name: customer_id
+        description: The unique identifier for each customer.
+      - name: order_date
+        description: The date when the order was placed.
+      - name: status
+        description: The status of the order.
+      - name: amount
+        description: The total amount of the order.
+      - name: average_order_value
+        description: The average value of the orders.
+

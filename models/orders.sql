@@ -43,7 +43,8 @@ final as (
 
         {% endfor -%}
 
-        order_payments.total_amount as amount
+        order_payments.total_amount as amount,
+        order_payments.total_amount / count(orders.order_id) over() as average_order_value
 
     from orders
 
