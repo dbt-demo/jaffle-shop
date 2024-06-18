@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: employee_utilization_per_day
+    description: This model calculates the daily utilization of employees based on visit details and employee capacity.
+    columns:
+      - name: TENANT_UUID
+        description: The unique identifier for the tenant.
+      - name: TENANT
+        description: The name of the tenant.
+      - name: START_LAST_DAY_UTC
+        description: The start date of the last day in UTC.
+      - name: DAY
+        description: The day of the visit.
+      - name: EMPLOYEE
+        description: The employee involved in the visit.
+      - name: EMPLOYEE_MAXIMUM_DAILY_CAPACITY
+        description: The maximum daily capacity of the employee.
+      - name: EMPLOYEE_MAXIMUM_WEEKLY_CAPACITY
+        description: The maximum weekly capacity of the employee.
+      - name: EMPLOYEE_AVAILABILITY
+        description: The availability of the employee.
+      - name: CALCULATED_DAILY_CAPACITY
+        description: The calculated daily capacity of the employee.
+      - name: DAILY_VISITS_SCHEDULED
+        description: The number of daily visits scheduled.
+      - name: DAILY_SCHEDULED_HOURS
+        description: The number of daily scheduled hours.
+
