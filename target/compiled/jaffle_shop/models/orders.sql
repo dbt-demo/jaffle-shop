@@ -35,21 +35,13 @@ final as (
         orders.order_id,
         orders.customer_id,
         orders.order_date,
-        orders.status,
-
+        orders.order_status,
         order_payments.credit_card_amount,
-
         order_payments.coupon_amount,
-
         order_payments.bank_transfer_amount,
-
         order_payments.gift_card_amount,
-
         order_payments.total_amount as amount
-
     from orders
-
-
     left join order_payments
         on orders.order_id = order_payments.order_id
 
