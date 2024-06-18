@@ -1,58 +1,25 @@
-
-
-with orders as (
-
-    select * from "jaffle_shop"."main"."stg_orders"
-
+WITH orders AS (
+    SELECT * FROM "jaffle_shop"."main"."stg_orders"
 ),
-
-payments as (
-
-    select * from "jaffle_shop"."main"."stg_payments"
-
+payments AS (
+    SELECT * FROM "jaffle_shop"."main"."stg_payments"
 ),
-
-order_payments as (
-
-    select
+order_payments AS (
+    SELECT
         order_id,
-
-        sum(case when payment_method = 'credit_card' then amount else 0 end) as credit_card_amount,
-        sum(case when payment_method = 'coupon' then amount else 0 end) as coupon_amount,
-        sum(case when payment_method = 'bank_transfer' then amount else 0 end) as bank_transfer_amount,
-        sum(case when payment_method = 'gift_card' then amount else 0 end) as gift_card_amount,
-        sum(amount) as total_amount
-
-    from payments
-
-    group by order_id
-
+        SUM(amount) AS total_amount
+    FROM payments
+    GROUP BY order_id
 ),
-
-final as (
-
-    select
+final AS (
+    SELECT
         orders.order_id,
         orders.customer_id,
         orders.order_date,
         orders.status,
-
-        order_payments.credit_card_amount,
-
-        order_payments.coupon_amount,
-
-        order_payments.bank_transfer_amount,
-
-        order_payments.gift_card_amount,
-
-        order_payments.total_amount as amount
-
-    from orders
-
-
-    left join order_payments
-        on orders.order_id = order_payments.order_id
-
+        order_payments.total_amount AS amount
+    FROM orders
+    LEFT JOIN order_payments
+        ON orders.order_id = order_payments.order_id
 )
-
-select * from final
+SELECT * FROM final
