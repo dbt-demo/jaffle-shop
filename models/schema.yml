@@ -13,9 +13,11 @@ models:
 
       - name: first_name
         description: Customer's first name. PII.
-
+        tests:
+          - not_null
       - name: last_name
-        description: Customer's last name. PII.
+        tests:
+          - not_null
 
       - name: first_order
         description: Date (UTC) of a customer's first order

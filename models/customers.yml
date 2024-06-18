@@ -1,0 +1,17 @@
+version: 2
+models:
+  - name: customers
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: customer_id
+        description: The unique identifier for each customer.
+        tests:
+          - not_null
+      - name: first_name
+        description: The first name of the customer.
+        tests:
+          - not_null
+      - name: last_name
+        description: The last name of the customer.
+        tests:
+          - not_null
