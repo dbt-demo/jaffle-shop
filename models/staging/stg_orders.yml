@@ -10,6 +10,30 @@ models:
           - not_null
       - name: customer_id
         description: The unique identifier for each customer. This column is considered PII.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: id
+      - name: order_date
+        description: The date when the order was placed.
+      - name: status
+        description: The current status of the order.
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+version: 2
+models:
+  - name: stg_orders
+    description: This table contains staged order data, including order ID, customer ID, order date, and status. The `customer_id` column is considered PII.
+    columns:
+      - name: order_id
+        description: The unique identifier for each order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: The unique identifier for each customer. This column is considered PII.
       - name: order_date
         description: The date when the order was placed.
       - name: status
