@@ -24,10 +24,10 @@ models:
         description: Date (UTC) of a customer's most recent order
 
       - name: number_of_orders
-        description: Count of the number of orders a customer has placed
+      description: Total amount (CAD) of the order
 
       - name: total_order_amount
-        description: Total value (AUD) of a customer's orders
+        description: Total value (CAD) of a customer's orders
 
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
@@ -57,7 +57,7 @@ models:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
 
       - name: amount
-        description: Total amount (AUD) of the order
+        description: Total amount (CAD) of the order
         tests:
           - not_null
 
