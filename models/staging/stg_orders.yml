@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: stg_orders
+    description: This table contains staged order data, including order ID, customer ID, order date, and status.
+    columns:
+      - name: order_id
+        description: The unique identifier for each order.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: The unique identifier for each customer.
+      - name: order_date
+        description: The date when the order was placed.
+      - name: status
+        description: The current status of the order.
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+
