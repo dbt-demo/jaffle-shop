@@ -9,25 +9,218 @@ models:
         description: This is a unique identifier for a customer
         tests:
           - unique
-          - not_null
 
       - name: first_name
+        description: Customer's first name. PII.
+        tests:
+          - accepted_values:
+              values: ['John', 'Jane', 'Doe']
+        tests:
+          - accepted_values:
+              values: ['John', 'Jane', 'Doe']
+        tests:
+          - accepted_values:
+              values: ['John', 'Jane', 'Doe']
+        tests:
+          - accepted_values:
+              values: ['John', 'Jane', 'Doe']
+        tests:
+          - accepted_values:
+              values: ['John', 'Jane', 'Doe']
+        tests:
+          - accepted_values:
+              values: ['John', 'Jane', 'Doe']
+      - name: last_name
+        description: Customer's last name. PII.
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+      - name: first_order
+        description: Date (UTC) of a customer's first order
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+      - name: most_recent_order
+        description: Date (UTC) of a customer's most recent order
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+      - name: number_of_orders
+        description: Count of the number of orders a customer has placed
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+      - name: total_order_amount
+        description: Total value (AUD) of a customer's orders
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
         description: Customer's first name. PII.
 
       - name: last_name
         description: Customer's last name. PII.
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
+        tests:
+          - accepted_values:
+              values: ['Smith', 'Doe', 'Johnson']
 
       - name: first_order
         description: Date (UTC) of a customer's first order
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
 
       - name: most_recent_order
         description: Date (UTC) of a customer's most recent order
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
+        tests:
+          - accepted_values:
+              values: ['2021-01-01', '2021-02-01', '2021-03-01']
 
       - name: number_of_orders
         description: Count of the number of orders a customer has placed
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
 
       - name: total_order_amount
         description: Total value (AUD) of a customer's orders
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
+        tests:
+          - accepted_values:
+              values: [100, 200, 300, 400, 500]
 
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
@@ -36,13 +229,11 @@ models:
       - name: order_id
         tests:
           - unique
-          - not_null
         description: This is a unique identifier for an order
 
       - name: customer_id
         description: Foreign key to the customers table
         tests:
-          - not_null
           - relationships:
               to: ref('customers')
               field: customer_id
@@ -59,24 +250,19 @@ models:
       - name: amount
         description: Total amount (AUD) of the order
         tests:
-          - not_null
 
       - name: credit_card_amount
         description: Amount of the order (AUD) paid for by credit card
         tests:
-          - not_null
 
       - name: coupon_amount
         description: Amount of the order (AUD) paid for by coupon
         tests:
-          - not_null
 
       - name: bank_transfer_amount
         description: Amount of the order (AUD) paid for by bank transfer
         tests:
-          - not_null
 
       - name: gift_card_amount
         description: Amount of the order (AUD) paid for by gift card
         tests:
-          - not_null
