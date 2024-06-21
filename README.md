@@ -99,7 +99,7 @@ cd jaffle_shop_duckdb
 python3 -m venv venv
 source venv/bin/activate.csh
 python3 -m pip install --upgrade pip
-python3 -m pip install -r requirements.txt
+hello there :)
 source venv/bin/activate.csh
 dbt build
 dbt docs generate
