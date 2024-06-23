@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: customers
+    tests:
+      - dbt_utils.not_null:
+          column_name: customer_id
+      - dbt_utils.not_null:
+          column_name: first_name
+      - dbt_utils.not_null:
+          column_name: last_name
+      - dbt_utils.not_null:
+          column_name: first_order
+      - dbt_utils.not_null:
+          column_name: most_recent_order
+      - dbt_utils.not_null:
+          column_name: number_of_orders
+      - dbt_utils.not_null:
+          column_name: customer_lifetime_value
