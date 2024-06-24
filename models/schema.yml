@@ -64,12 +64,24 @@ models:
       - name: credit_card_amount
         description: Amount of the order (AUD) paid for by credit card
         tests:
+          - accepted_values:
+              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
+        tests:
           - not_null
 
+        tests:
+          - accepted_values:
+              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
       - name: coupon_amount
         description: Amount of the order (AUD) paid for by coupon
         tests:
+        tests:
+          - accepted_values:
+              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
           - not_null
+        tests:
+          - accepted_values:
+              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
 
       - name: bank_transfer_amount
         description: Amount of the order (AUD) paid for by bank transfer
