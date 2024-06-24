@@ -79,4 +79,9 @@ models:
       - name: gift_card_amount
         description: Amount of the order (AUD) paid for by gift card
         tests:
+      - name: payment_method
+        description: The method of payment used for the order
+        tests:
+          - accepted_values:
+              values: ['credit_card', 'coupon', 'bank_transfer', 'gift_card']
           - not_null
