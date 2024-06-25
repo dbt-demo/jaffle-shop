@@ -61,6 +61,10 @@ models:
         tests:
           - not_null
 
+      - name: payment_method
+        description: The method used for payment
+        tests:
+          - not_null
       - name: credit_card_amount
         description: Amount of the order (AUD) paid for by credit card
         tests:
