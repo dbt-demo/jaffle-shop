@@ -13,17 +13,23 @@ models:
 
       - name: first_name
         description: Customer's first name. PII.
-
+        tests:
+          - not_null
       - name: last_name
-        description: Customer's last name. PII.
+        tests:
+          - not_null
 
-      - name: first_order
+        tests:
+          - not_null
         description: Date (UTC) of a customer's first order
-
+        tests:
+          - not_null
       - name: most_recent_order
-        description: Date (UTC) of a customer's most recent order
+        tests:
+          - not_null
 
-      - name: number_of_orders
+        tests:
+          - not_null
         description: Count of the number of orders a customer has placed
 
       - name: total_order_amount
