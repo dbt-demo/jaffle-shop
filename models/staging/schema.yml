@@ -7,6 +7,8 @@ models:
         tests:
           - unique
           - not_null
+      - name: customer_status
+        description: Indicates whether the customer is active or inactive based on the is_active column.
 
   - name: stg_orders
     columns:
