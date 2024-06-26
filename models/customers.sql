@@ -1,3 +1,4 @@
+-- this is the customers model
 with customers as (
 
     select * from {{ ref('stg_customers') }}
