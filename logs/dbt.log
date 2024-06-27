@@ -3306,3 +3306,512 @@ having count(*) > 1
 [0m14:21:04.092795 [debug] [MainThread]: Command `dbt build` succeeded at 14:21:04.092739 after 0.80 seconds
 [0m14:21:04.092964 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064a66a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089bf190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080fd1f0>]}
 [0m14:21:04.093140 [debug] [MainThread]: Flushing usage events
+[0m20:05:50.588942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fc0f0ee00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fc1802830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fbed401f0>]}
+
+
+============================== 20:05:50.592573 | be72d6fb-814b-4011-95a9-47794c5d0fa2 ==============================
+[0m20:05:50.592573 [info ] [MainThread]: Running with dbt=1.7.4
+[0m20:05:50.593769 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/app/.environment/55ed2a66-94cf-4ec0-bf30-1ee09453e772/667dc4caaa3372c75c340ac8/logs', 'debug': 'False', 'profiles_dir': '/app/.environment/55ed2a66-94cf-4ec0-bf30-1ee09453e772/667dc4caaa3372c75c340ac8', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt test --select orders', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:05:51.007171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fc1802830>]}
+[0m20:05:51.273259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fbb8c4ee0>]}
+[0m20:05:51.274714 [info ] [MainThread]: Registered adapter: duckdb=1.7.3
+[0m20:05:51.285029 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m20:05:51.299573 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m20:05:51.300521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fba9bcc10>]}
+[0m20:05:53.249168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fba6f5ed0>]}
+[0m20:05:53.267275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fb9f22800>]}
+[0m20:05:53.268391 [info ] [MainThread]: Found 5 models, 3 seeds, 20 tests, 0 sources, 0 exposures, 0 metrics, 391 macros, 0 groups, 0 semantic models
+[0m20:05:53.269316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fba80e7a0>]}
+[0m20:05:53.272125 [info ] [MainThread]: 
+[0m20:05:53.273496 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m20:05:53.275868 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_jaffle_shop_main'
+[0m20:05:53.289623 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m20:05:53.290523 [debug] [ThreadPool]: On list_jaffle_shop_main: BEGIN
+[0m20:05:53.291357 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:05:53.300558 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:05:53.301521 [debug] [ThreadPool]: Using duckdb connection "list_jaffle_shop_main"
+[0m20:05:53.302416 [debug] [ThreadPool]: On list_jaffle_shop_main: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "connection_name": "list_jaffle_shop_main"} */
+select
+      'jaffle_shop' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main'
+    and table_catalog = 'jaffle_shop'
+  
+[0m20:05:53.330887 [debug] [ThreadPool]: SQL status: OK in 0.0 seconds
+[0m20:05:53.337645 [debug] [ThreadPool]: On list_jaffle_shop_main: ROLLBACK
+[0m20:05:53.338784 [debug] [ThreadPool]: Failed to rollback 'list_jaffle_shop_main'
+[0m20:05:53.339770 [debug] [ThreadPool]: On list_jaffle_shop_main: Close
+[0m20:05:53.346719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'be72d6fb-814b-4011-95a9-47794c5d0fa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fba6f65c0>]}
+[0m20:05:53.347888 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:05:53.348765 [debug] [MainThread]: On master: BEGIN
+[0m20:05:53.349620 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:05:53.356553 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:05:53.357539 [debug] [MainThread]: On master: COMMIT
+[0m20:05:53.358462 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:05:53.359309 [debug] [MainThread]: On master: COMMIT
+[0m20:05:53.360366 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:05:53.361378 [debug] [MainThread]: On master: Close
+[0m20:05:53.364033 [info ] [MainThread]: Concurrency: 1 threads (target='test')
+[0m20:05:53.365103 [info ] [MainThread]: 
+[0m20:05:53.368276 [debug] [Thread-1 (]: Began running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5
+[0m20:05:53.369339 [info ] [Thread-1 (]: 1 of 10 START test accepted_values_orders_status__placed__shipped__completed__returned  [RUN]
+[0m20:05:53.370684 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_jaffle_shop_main, now test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5)
+[0m20:05:53.371682 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5
+[0m20:05:53.384700 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5"
+[0m20:05:53.385975 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5 (compile): 20:05:53.372289 => 20:05:53.385492
+[0m20:05:53.386930 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5
+[0m20:05:53.408481 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5"
+[0m20:05:53.409698 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5"
+[0m20:05:53.410641 [debug] [Thread-1 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5: BEGIN
+[0m20:05:53.411567 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.418730 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.419747 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5"
+[0m20:05:53.420708 [debug] [Thread-1 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        status as value_field,
+        count(*) as n_records
+
+    from "jaffle_shop"."main"."orders"
+    group by status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'placed','shipped','completed','returned'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.423897 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.426976 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5 (execute): 20:05:53.387551 => 20:05:53.426499
+[0m20:05:53.427983 [debug] [Thread-1 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5: ROLLBACK
+[0m20:05:53.429001 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5'
+[0m20:05:53.429964 [debug] [Thread-1 (]: On test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5: Close
+[0m20:05:53.432980 [error] [Thread-1 (]: 1 of 10 FAIL 1 accepted_values_orders_status__placed__shipped__completed__returned  [[31mFAIL 1[0m in 0.06s]
+[0m20:05:53.434224 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5
+[0m20:05:53.435241 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m20:05:53.436443 [info ] [Thread-1 (]: 2 of 10 START test not_null_orders_amount ...................................... [RUN]
+[0m20:05:53.437821 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.accepted_values_orders_status__placed__shipped__completed__returned.69dce9e5d5, now test.jaffle_shop.not_null_orders_amount.106140f9fd)
+[0m20:05:53.438772 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m20:05:53.449746 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m20:05:53.451157 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_amount.106140f9fd (compile): 20:05:53.439364 => 20:05:53.450606
+[0m20:05:53.452108 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m20:05:53.456144 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m20:05:53.457270 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m20:05:53.458206 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: BEGIN
+[0m20:05:53.459079 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.466285 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.467343 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_amount.106140f9fd"
+[0m20:05:53.468301 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_amount.106140f9fd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select amount
+from "jaffle_shop"."main"."orders"
+where amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.469869 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.472344 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_amount.106140f9fd (execute): 20:05:53.452693 => 20:05:53.471889
+[0m20:05:53.473428 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: ROLLBACK
+[0m20:05:53.474529 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_amount.106140f9fd'
+[0m20:05:53.475473 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_amount.106140f9fd: Close
+[0m20:05:53.478049 [info ] [Thread-1 (]: 2 of 10 PASS not_null_orders_amount ............................................ [[32mPASS[0m in 0.04s]
+[0m20:05:53.479259 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_amount.106140f9fd
+[0m20:05:53.480333 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m20:05:53.481428 [info ] [Thread-1 (]: 3 of 10 START test not_null_orders_bank_transfer_amount ........................ [RUN]
+[0m20:05:53.482708 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_amount.106140f9fd, now test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49)
+[0m20:05:53.483687 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m20:05:53.490465 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m20:05:53.491802 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49 (compile): 20:05:53.484315 => 20:05:53.491233
+[0m20:05:53.492819 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m20:05:53.496789 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m20:05:53.497903 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m20:05:53.498880 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: BEGIN
+[0m20:05:53.499788 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.506441 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.507376 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"
+[0m20:05:53.508411 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select bank_transfer_amount
+from "jaffle_shop"."main"."orders"
+where bank_transfer_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.510010 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.512432 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49 (execute): 20:05:53.493434 => 20:05:53.511974
+[0m20:05:53.513464 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: ROLLBACK
+[0m20:05:53.514463 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49'
+[0m20:05:53.515398 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49: Close
+[0m20:05:53.517975 [info ] [Thread-1 (]: 3 of 10 PASS not_null_orders_bank_transfer_amount .............................. [[32mPASS[0m in 0.04s]
+[0m20:05:53.519180 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49
+[0m20:05:53.520230 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m20:05:53.521298 [info ] [Thread-1 (]: 4 of 10 START test not_null_orders_coupon_amount ............................... [RUN]
+[0m20:05:53.522591 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_bank_transfer_amount.7743500c49, now test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625)
+[0m20:05:53.523560 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m20:05:53.530167 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m20:05:53.531448 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625 (compile): 20:05:53.524185 => 20:05:53.530999
+[0m20:05:53.532384 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m20:05:53.536388 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m20:05:53.537518 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m20:05:53.538423 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: BEGIN
+[0m20:05:53.539292 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.545890 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.546820 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"
+[0m20:05:53.547765 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select coupon_amount
+from "jaffle_shop"."main"."orders"
+where coupon_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.549433 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.551943 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625 (execute): 20:05:53.532991 => 20:05:53.551481
+[0m20:05:53.552888 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: ROLLBACK
+[0m20:05:53.553870 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625'
+[0m20:05:53.554763 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625: Close
+[0m20:05:53.559481 [info ] [Thread-1 (]: 4 of 10 PASS not_null_orders_coupon_amount ..................................... [[32mPASS[0m in 0.04s]
+[0m20:05:53.560705 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625
+[0m20:05:53.561742 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m20:05:53.562850 [info ] [Thread-1 (]: 5 of 10 START test not_null_orders_credit_card_amount .......................... [RUN]
+[0m20:05:53.564163 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_coupon_amount.ab90c90625, now test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59)
+[0m20:05:53.565102 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m20:05:53.571680 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m20:05:53.572878 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59 (compile): 20:05:53.565690 => 20:05:53.572430
+[0m20:05:53.573790 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m20:05:53.577666 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m20:05:53.578784 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m20:05:53.579875 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: BEGIN
+[0m20:05:53.580784 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.587378 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.588329 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"
+[0m20:05:53.589243 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select credit_card_amount
+from "jaffle_shop"."main"."orders"
+where credit_card_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.590824 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.593217 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59 (execute): 20:05:53.574424 => 20:05:53.592760
+[0m20:05:53.594158 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: ROLLBACK
+[0m20:05:53.595258 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59'
+[0m20:05:53.596249 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59: Close
+[0m20:05:53.598771 [info ] [Thread-1 (]: 5 of 10 PASS not_null_orders_credit_card_amount ................................ [[32mPASS[0m in 0.03s]
+[0m20:05:53.600018 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59
+[0m20:05:53.601039 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m20:05:53.602140 [info ] [Thread-1 (]: 6 of 10 START test not_null_orders_customer_id ................................. [RUN]
+[0m20:05:53.603511 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_credit_card_amount.d3ca593b59, now test.jaffle_shop.not_null_orders_customer_id.c5f02694af)
+[0m20:05:53.604460 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m20:05:53.612633 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m20:05:53.613918 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_customer_id.c5f02694af (compile): 20:05:53.605046 => 20:05:53.613470
+[0m20:05:53.614852 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m20:05:53.618798 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m20:05:53.619949 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m20:05:53.620865 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: BEGIN
+[0m20:05:53.621761 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.628649 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.629579 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"
+[0m20:05:53.630487 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_customer_id.c5f02694af"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select customer_id
+from "jaffle_shop"."main"."orders"
+where customer_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.632127 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.634516 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_customer_id.c5f02694af (execute): 20:05:53.615431 => 20:05:53.634062
+[0m20:05:53.635451 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: ROLLBACK
+[0m20:05:53.636490 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_customer_id.c5f02694af'
+[0m20:05:53.637375 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_customer_id.c5f02694af: Close
+[0m20:05:53.639901 [info ] [Thread-1 (]: 6 of 10 PASS not_null_orders_customer_id ....................................... [[32mPASS[0m in 0.04s]
+[0m20:05:53.641099 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_customer_id.c5f02694af
+[0m20:05:53.642087 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m20:05:53.643149 [info ] [Thread-1 (]: 7 of 10 START test not_null_orders_gift_card_amount ............................ [RUN]
+[0m20:05:53.644451 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_customer_id.c5f02694af, now test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a)
+[0m20:05:53.645384 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m20:05:53.652114 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m20:05:53.653313 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a (compile): 20:05:53.645974 => 20:05:53.652869
+[0m20:05:53.654224 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m20:05:53.658130 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m20:05:53.659257 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m20:05:53.660196 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: BEGIN
+[0m20:05:53.661124 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.667879 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.668809 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"
+[0m20:05:53.669726 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select gift_card_amount
+from "jaffle_shop"."main"."orders"
+where gift_card_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.671389 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.673796 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a (execute): 20:05:53.654857 => 20:05:53.673338
+[0m20:05:53.674738 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: ROLLBACK
+[0m20:05:53.675761 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a'
+[0m20:05:53.676690 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a: Close
+[0m20:05:53.679180 [info ] [Thread-1 (]: 7 of 10 PASS not_null_orders_gift_card_amount .................................. [[32mPASS[0m in 0.03s]
+[0m20:05:53.680433 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a
+[0m20:05:53.681434 [debug] [Thread-1 (]: Began running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m20:05:53.682492 [info ] [Thread-1 (]: 8 of 10 START test not_null_orders_order_id .................................... [RUN]
+[0m20:05:53.683798 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_gift_card_amount.413a0d2d7a, now test.jaffle_shop.not_null_orders_order_id.cf6c17daed)
+[0m20:05:53.684740 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m20:05:53.691532 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m20:05:53.692745 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_order_id.cf6c17daed (compile): 20:05:53.685329 => 20:05:53.692300
+[0m20:05:53.693650 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m20:05:53.697604 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m20:05:53.698725 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m20:05:53.699704 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: BEGIN
+[0m20:05:53.700604 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.707239 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.708192 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"
+[0m20:05:53.709118 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.not_null_orders_order_id.cf6c17daed"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select order_id
+from "jaffle_shop"."main"."orders"
+where order_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.710812 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.713224 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.not_null_orders_order_id.cf6c17daed (execute): 20:05:53.694270 => 20:05:53.712770
+[0m20:05:53.714160 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: ROLLBACK
+[0m20:05:53.715146 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.not_null_orders_order_id.cf6c17daed'
+[0m20:05:53.716084 [debug] [Thread-1 (]: On test.jaffle_shop.not_null_orders_order_id.cf6c17daed: Close
+[0m20:05:53.718716 [info ] [Thread-1 (]: 8 of 10 PASS not_null_orders_order_id .......................................... [[32mPASS[0m in 0.04s]
+[0m20:05:53.719947 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.not_null_orders_order_id.cf6c17daed
+[0m20:05:53.720953 [debug] [Thread-1 (]: Began running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m20:05:53.722029 [info ] [Thread-1 (]: 9 of 10 START test relationships_orders_customer_id__customer_id__ref_customers_  [RUN]
+[0m20:05:53.723316 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.not_null_orders_order_id.cf6c17daed, now test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2)
+[0m20:05:53.724287 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m20:05:53.731702 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m20:05:53.732900 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2 (compile): 20:05:53.724903 => 20:05:53.732449
+[0m20:05:53.733807 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m20:05:53.737698 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m20:05:53.738815 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m20:05:53.739790 [debug] [Thread-1 (]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: BEGIN
+[0m20:05:53.740690 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.747177 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.748145 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"
+[0m20:05:53.749082 [debug] [Thread-1 (]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select customer_id as from_field
+    from "jaffle_shop"."main"."orders"
+    where customer_id is not null
+),
+
+parent as (
+    select customer_id as to_field
+    from "jaffle_shop"."main"."customers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.751849 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.754284 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2 (execute): 20:05:53.734425 => 20:05:53.753827
+[0m20:05:53.755241 [debug] [Thread-1 (]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: ROLLBACK
+[0m20:05:53.756269 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2'
+[0m20:05:53.757176 [debug] [Thread-1 (]: On test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2: Close
+[0m20:05:53.759816 [info ] [Thread-1 (]: 9 of 10 PASS relationships_orders_customer_id__customer_id__ref_customers_ ..... [[32mPASS[0m in 0.04s]
+[0m20:05:53.761042 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2
+[0m20:05:53.762048 [debug] [Thread-1 (]: Began running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m20:05:53.763113 [info ] [Thread-1 (]: 10 of 10 START test unique_orders_order_id ..................................... [RUN]
+[0m20:05:53.764418 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.jaffle_shop.relationships_orders_customer_id__customer_id__ref_customers_.c6ec7f58f2, now test.jaffle_shop.unique_orders_order_id.fed79b3a6e)
+[0m20:05:53.765359 [debug] [Thread-1 (]: Began compiling node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m20:05:53.775872 [debug] [Thread-1 (]: Writing injected SQL for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m20:05:53.777109 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.unique_orders_order_id.fed79b3a6e (compile): 20:05:53.765952 => 20:05:53.776660
+[0m20:05:53.778146 [debug] [Thread-1 (]: Began executing node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m20:05:53.782147 [debug] [Thread-1 (]: Writing runtime sql for node "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m20:05:53.783303 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m20:05:53.784264 [debug] [Thread-1 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: BEGIN
+[0m20:05:53.785184 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:05:53.791810 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.792735 [debug] [Thread-1 (]: Using duckdb connection "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"
+[0m20:05:53.793684 [debug] [Thread-1 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "test", "node_id": "test.jaffle_shop.unique_orders_order_id.fed79b3a6e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    order_id as unique_field,
+    count(*) as n_records
+
+from "jaffle_shop"."main"."orders"
+where order_id is not null
+group by order_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m20:05:53.795949 [debug] [Thread-1 (]: SQL status: OK in 0.0 seconds
+[0m20:05:53.798362 [debug] [Thread-1 (]: Timing info for test.jaffle_shop.unique_orders_order_id.fed79b3a6e (execute): 20:05:53.778806 => 20:05:53.797908
+[0m20:05:53.799309 [debug] [Thread-1 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: ROLLBACK
+[0m20:05:53.800331 [debug] [Thread-1 (]: Failed to rollback 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e'
+[0m20:05:53.801228 [debug] [Thread-1 (]: On test.jaffle_shop.unique_orders_order_id.fed79b3a6e: Close
+[0m20:05:53.803702 [info ] [Thread-1 (]: 10 of 10 PASS unique_orders_order_id ........................................... [[32mPASS[0m in 0.04s]
+[0m20:05:53.804935 [debug] [Thread-1 (]: Finished running node test.jaffle_shop.unique_orders_order_id.fed79b3a6e
+[0m20:05:53.807064 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:05:53.807996 [debug] [MainThread]: On master: BEGIN
+[0m20:05:53.808853 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:05:53.815891 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:05:53.816837 [debug] [MainThread]: On master: COMMIT
+[0m20:05:53.817761 [debug] [MainThread]: Using duckdb connection "master"
+[0m20:05:53.818587 [debug] [MainThread]: On master: COMMIT
+[0m20:05:53.819621 [debug] [MainThread]: SQL status: OK in 0.0 seconds
+[0m20:05:53.820493 [debug] [MainThread]: On master: Close
+[0m20:05:53.823010 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:05:53.823907 [debug] [MainThread]: Connection 'test.jaffle_shop.unique_orders_order_id.fed79b3a6e' was properly closed.
+[0m20:05:53.824806 [info ] [MainThread]: 
+[0m20:05:53.825709 [info ] [MainThread]: Finished running 10 tests in 0 hours 0 minutes and 0.55 seconds (0.55s).
+[0m20:05:53.828369 [debug] [MainThread]: Command end result
+[0m20:05:53.842559 [info ] [MainThread]: 
+[0m20:05:53.843529 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m20:05:53.844396 [info ] [MainThread]: 
+[0m20:05:53.845267 [error] [MainThread]: [31mFailure in test accepted_values_orders_status__placed__shipped__completed__returned (models/schema.yml)[0m
+[0m20:05:53.846219 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m20:05:53.847156 [info ] [MainThread]: 
+[0m20:05:53.848092 [info ] [MainThread]:   compiled Code at target/compiled/jaffle_shop/models/schema.yml/accepted_values_orders_8b08a2e3c7880954e0d6e0b54536f6b3.sql
+[0m20:05:53.848984 [info ] [MainThread]: 
+[0m20:05:53.849875 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=1 SKIP=0 TOTAL=10
+[0m20:05:53.851306 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 3.3464706, "process_user_time": 5.867079, "process_kernel_time": 0.20369, "process_mem_max_rss": "195436", "process_out_blocks": "2928", "command_success": false, "process_in_blocks": "0"}
+[0m20:05:53.852451 [debug] [MainThread]: Command `dbt test` failed at 20:05:53.852132 after 3.35 seconds
+[0m20:05:53.853375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fc0f0ee00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fb9f22800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0fbb8c4ee0>]}
+[0m20:05:53.854328 [debug] [MainThread]: Flushing usage events
