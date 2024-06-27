@@ -52,6 +52,9 @@ models:
 
       - name: status
         description: '{{ doc("orders_status") }}'
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'returned']
 
       - name: amount
         description: Total amount (AUD) of the order
