@@ -1,0 +1,22 @@
+
+    
+    
+
+with all_values as (
+
+    select
+        coupon_amount as value_field,
+        count(*) as n_records
+
+    from "jaffle_shop"."main"."orders"
+    group by coupon_amount
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'coupon'
+)
+
+
