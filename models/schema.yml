@@ -12,21 +12,27 @@ models:
           - not_null
 
       - name: first_name
+          - not_null
         description: Customer's first name. PII.
 
       - name: last_name
+          - not_null
         description: Customer's last name. PII.
 
       - name: first_order
+          - not_null
         description: Date (UTC) of a customer's first order
 
       - name: most_recent_order
+          - not_null
         description: Date (UTC) of a customer's most recent order
 
       - name: number_of_orders
+          - not_null
         description: Count of the number of orders a customer has placed
 
       - name: total_order_amount
+          - not_null
         description: Total value (AUD) of a customer's orders
 
   - name: orders
