@@ -1,0 +1,15 @@
+unit_tests:
+  - name: test_orders_total_amount
+    description: 'Check total_amount calculation logic.'
+    model: orders
+    given:
+      - input: ref('stg_orders')
+        rows:
+          - {order_id: 1, customer_id: 1, order_date: '2023-01-01', status: 'completed'}
+      - input: ref('stg_payments')
+        rows:
+          - {order_id: 1, payment_method: 'credit_card', amount: 100}
+          - {order_id: 1, payment_method: 'coupon', amount: 50}
+    expect:
+      rows:
+        - {order_id: 1, total_amount: 150}
