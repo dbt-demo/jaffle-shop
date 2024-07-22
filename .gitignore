@@ -5,8 +5,8 @@ logs/
 # jaffle_shop.duckdb
 # Ignore user-specific config
 profiles.yml
-.pem
-
+*.pem
+*.duckdb
 # Ignore secrets
 .env
 .env.*
