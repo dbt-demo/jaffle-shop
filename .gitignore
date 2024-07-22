@@ -1,0 +1,36 @@
+# Ignore dbt artifacts
+/target/
+dbt_modules/
+logs/
+# jaffle_shop.duckdb
+# Ignore user-specific config
+profiles.yml
+.pem
+
+# Ignore secrets
+.env
+.env.*
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Python virtual environments
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore other IDE settings
+.idea/
+*.iml
+*.ipr
+*.iws
+# End Generation Here
