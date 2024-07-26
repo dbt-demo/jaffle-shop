@@ -1,3 +1,4 @@
+{{ config(materialized='incremental') }}
 with customers as (
 
     select * from {{ ref('stg_customers') }}
@@ -67,3 +68,6 @@ final as (
 )
 
 select * from final
+{% if is_incremental() %}
+  where customer_orders.most_recent_order >= (select coalesce(max(most_recent_order), '1900-01-01') from {{ this }})
+{% endif %}
