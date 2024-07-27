@@ -54,6 +54,7 @@ final as (
         customer_orders.first_order,
         customer_orders.most_recent_order,
         customer_orders.number_of_orders,
+        customer_orders.customer_churn_date,
         customer_payments.total_amount as customer_lifetime_value
 
     from customers

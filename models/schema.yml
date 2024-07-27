@@ -25,6 +25,8 @@ models:
 
       - name: number_of_orders
         description: Count of the number of orders a customer has placed
+      - name: customer_churn_date
+        description: Date (UTC) when the customer churned
 
       - name: total_order_amount
         description: Total value (AUD) of a customer's orders
