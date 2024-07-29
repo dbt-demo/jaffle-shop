@@ -1,3 +1,12 @@
+{{ config(
+    materialized='incremental',
+    unique_key='customer_id'
+) }}
+
+select * from final
+{% if is_incremental() %}
+  where customer_id > (select coalesce(max(customer_id), 0) from {{ this }})
+{% endif %}
 with customers as (
 
     select * from {{ ref('stg_customers') }}
