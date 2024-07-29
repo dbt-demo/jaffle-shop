@@ -1,3 +1,13 @@
+{{ config(
+    materialized='incremental',
+    unique_key='customer_id'
+) }}
+
+{% if is_incremental() %}
+    -- this filter will only be applied on an incremental run
+    where updated_at > (select max(updated_at) from {{ this }})
+{% endif %}
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}
