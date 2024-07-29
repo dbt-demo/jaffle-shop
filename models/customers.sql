@@ -1,3 +1,5 @@
+{{ config(materialized='incremental', unique_key='customer_id') }}
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}
@@ -67,3 +69,7 @@ final as (
 )
 
 select * from final
+
+{% if is_incremental() %}
+  where customer_id > (select coalesce(max(customer_id), 0) from {{ this }})
+{% endif %}
