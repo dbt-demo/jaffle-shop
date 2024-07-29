@@ -1,3 +1,4 @@
+{{ config(materialized='incremental') }}
 with customers as (
 
     select * from {{ ref('stg_customers') }}
@@ -66,4 +67,8 @@ final as (
 
 )
 
+
+{% if is_incremental() %}
+  where customer_id not in (select distinct customer_id from {{ this }})
+{% endif %}
 select * from final
