@@ -1,3 +1,5 @@
+{{ config(materialized='incremental', unique_key='customer_id') }}
+
 with source as (
 
     {#-
@@ -20,3 +22,7 @@ renamed as (
 )
 
 select * from renamed
+
+{% if is_incremental() %}
+  where customer_id > (select coalesce(max(customer_id), 0) from {{ this }})
+{% endif %}
