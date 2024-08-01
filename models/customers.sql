@@ -1,18 +1,32 @@
 with customers as (
 
-    select * from {{ ref('stg_customers') }}
+    select
+        customer_id,
+        first_name,
+        last_name
+    from {{ ref('stg_customers') }}
 
 ),
 
 orders as (
 
-    select * from {{ ref('stg_orders') }}
+    select
+        order_id,
+        customer_id,
+        order_date,
+        status
+    from {{ ref('stg_orders') }}
 
 ),
 
 payments as (
 
-    select * from {{ ref('stg_payments') }}
+    select
+        payment_id,
+        order_id,
+        payment_method,
+        amount
+    from {{ ref('stg_payments') }}
 
 ),
 
