@@ -48,7 +48,7 @@ customer_payments as (
 final as (
 
     select
-        customers.customer_id,
+        customers.id,
         customers.first_name,
         customers.last_name,
         customer_orders.first_order,
@@ -59,10 +59,10 @@ final as (
     from customers
 
     left join customer_orders
-        on customers.customer_id = customer_orders.customer_id
+        on customers.id = customer_orders.customer_id
 
     left join customer_payments
-        on  customers.customer_id = customer_payments.customer_id
+        on  customers.id = customer_payments.customer_id
 
 )
 
