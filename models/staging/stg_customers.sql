@@ -1,4 +1,4 @@
-with source as (
+with "select * from source" as (
 
     {#-
     Normally we would select from the table here, but we are using seeds to load
@@ -15,7 +15,7 @@ renamed as (
         first_name,
         last_name
 
-    from source
+    from "select * from source"
 
 )
 
