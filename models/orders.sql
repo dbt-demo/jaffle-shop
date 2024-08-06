@@ -1,5 +1,12 @@
 {% set payment_methods = ['credit_card', 'coupon', 'bank_transfer', 'gift_card'] %}
 
+{{
+    config(
+        materialized='incremental',
+        unique_key='order_id'
+    )
+}}
+
 with orders as (
 
     select * from {{ ref('stg_orders') }}
@@ -47,9 +54,12 @@ final as (
 
     from orders
 
-
     left join order_payments
         on orders.order_id = order_payments.order_id
+
+    {% if is_incremental() %}
+      where orders.order_date >= (select coalesce(max(order_date), '1900-01-01') from {{ this }})
+    {% endif %}
 
 )
 
