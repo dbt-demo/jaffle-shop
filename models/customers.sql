@@ -3,6 +3,7 @@ with customers as (
     select * from {{ ref('stg_customers') }}
 
 ),
+-- this is a comment
 
 orders as (
 
